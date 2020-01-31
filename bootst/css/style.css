@@ -1,3 +1,11 @@
 .js-todoList {
     list-style: none;
 }
+
+.check-color {
+    opacity: 0.5;
+}
+
+.nocheck-color {
+    opacity: 1;
+}

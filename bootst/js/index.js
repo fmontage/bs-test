@@ -18,8 +18,10 @@
     function changeLineThrough(target, flg) {
         if (flg) {
             target.style.textDecoration = 'line-through';
+            target.className = 'check-color';
         } else {
             target.style.textDecoration = 'none';
+            target.className = 'nocheck-color';
         }
     }
 
