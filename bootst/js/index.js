@@ -61,7 +61,7 @@
         const timestamp = now.getTime();
         const month = now.getMonth()+1;
         const hiniti = now.getDate();
-        const ymd =         "(" + month + "/" + hiniti + ")";
+        const ymd = "(" + month + "/" + hiniti + ")";
 
         const data = {
                 value: value,
