@@ -24,7 +24,7 @@
     }
 
     function addList(data) {
-        const textNode = document.createTextNode(data.value);
+        const textNode = document.createTextNode(data.value + data.ymd);
         const checkboxNode = document.createElement('input');
         const li = document.createElement('li');
 
