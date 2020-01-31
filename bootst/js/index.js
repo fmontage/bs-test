@@ -60,12 +60,14 @@
         const now = new Date();
         const timestamp = now.getTime();
         const month = now.getMonth()+1;
-        const date = now.getDate();
+        const hiniti = now.getDate();
+        const ymd =         "(" + month + "/" + hiniti + ")";
 
         const data = {
                 value: value,
                 done: false,
-                timestamp: timestamp
+                timestamp: timestamp,
+                ymd: ymd
         };
 
         addList(data);
