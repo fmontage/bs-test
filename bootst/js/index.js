@@ -28,13 +28,13 @@
     function addList(data) {
         const textNode = document.createTextNode(data.value + "\t" + data.ymd);
         const checkboxNode = document.createElement('input');
-        const li = document.createElement('li');
+        const label = document.createElement('label');
 
         checkboxNode.type = 'checkbox';
         checkboxNode.checked = data.done;
-        changeLineThrough(li, data.done);
+        changeLineThrough(label, data.done);
         checkboxNode.addEventListener('change', function () {
-            changeLineThrough(li, this.checked);
+            changeLineThrough(label, this.checked);
 
             const selfData = todoData.find(function (elm) {
                 return elm.timestamp === data.timestamp;
@@ -45,10 +45,10 @@
             saveData();
         });
 
-        li.appendChild(checkboxNode);
-        li.appendChild(textNode);
+        label.appendChild(checkboxNode);
+        label.appendChild(textNode);
 
-        document.querySelector('.js-todoList').appendChild(li);
+        document.querySelector('.js-todoList').appendChild(label);
     }
 
 
