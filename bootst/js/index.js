@@ -2,7 +2,7 @@
 
 (function () {
 
-    var todoData = [];
+    let todoData = [];
     const storage = window.localStorage;
 
 
