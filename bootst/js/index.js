@@ -55,11 +55,18 @@
 
 
         setTimeout(addClass, 5000);
+        setTimeout(addClassRed, 8000);
 
 
         function addClass() {
             liTodo.forEach((listTodo) => {
                 listTodo.classList.add('orange');
+            });
+        }
+
+        function addClassRed() {
+            liTodo.forEach((listTodo) => {
+                listTodo.classList.add('red');
             });
         }
     }

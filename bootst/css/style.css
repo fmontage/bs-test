@@ -2,8 +2,13 @@
     list-style: none;
 }
 
+
 .orange {
     color: #ff9933;
+}
+
+.red {
+    color: #ff3333;
 }
 
 .check-color {
