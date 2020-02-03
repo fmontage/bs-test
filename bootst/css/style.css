@@ -2,14 +2,11 @@
     list-style: none;
 }
 
+.orange {
+    color: #ff9933;
+}
+
 .check-color {
     opacity: 0.5;
-}
-
-.nocheck-color {
-    opacity: 1;
-}
-
-.orange {
-    color: blue;
+    color: #000;
 }

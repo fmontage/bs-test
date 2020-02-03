@@ -4,8 +4,7 @@
 
     let todoData = [];
     const storage = window.localStorage;
-
-
+   
     function saveData() {
         storage.setItem('todo', JSON.stringify(todoData));
     }
@@ -49,6 +48,20 @@
         li.appendChild(textNode);
 
         document.querySelector('.js-todoList').appendChild(li);
+
+        
+
+        const liTodo = document.querySelectorAll('.nocheck-color');
+
+
+        setTimeout(addClass, 5000);
+
+
+        function addClass() {
+            liTodo.forEach((listTodo) => {
+                listTodo.classList.add('orange');
+            });
+        }
     }
 
 
@@ -65,12 +78,15 @@
         const hiniti = now.getDate();
         const ymd = "(" + month + "/" + hiniti + ")";
 
+
         const data = {
                 value: value,
                 done: false,
                 timestamp: timestamp,
                 ymd: ymd
         };
+
+       
 
         addList(data);
 
