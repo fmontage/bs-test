@@ -6,6 +6,7 @@ body {
 }
 
 li {
+    font-family: 'Roboto', sans-serif;
     margin-bottom: 5px;
 }
 
@@ -19,6 +20,7 @@ li {
 
 .title {
     font-size: 40px;
+    margin-bottom: 10px;
 }
 
 .header {
@@ -32,7 +34,7 @@ li {
 
 .js-inputText {
     height: 25px;
-    width: 600px;
+    width: 610px;
 }
 
 .js-addButton {
