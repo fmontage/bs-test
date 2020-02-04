@@ -30,6 +30,8 @@
         const li = document.createElement('li');
         const label = document.createElement('label');
         const div = document.createElement('div');
+        const span = document.createElement('span');
+
 
         label.className = 'label_style';
         div.className = 'div_style';
@@ -52,7 +54,8 @@
         });
 
         li.appendChild(label);
-        label.appendChild(textNode);
+        label.appendChild(span);
+        span.appendChild(textNode);
         label.appendChild(checkboxNode);
         label.appendChild(div);
 

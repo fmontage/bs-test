@@ -157,7 +157,7 @@ h1{
     color: #ff3333;
 }
 
-.check-color {
+.check-color span {
     opacity: 0.5;
     color: #000;
 }
