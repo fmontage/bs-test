@@ -5,8 +5,12 @@ body {
     z-index: -1;
 }
 
+h1{
+    font-family: 'Sawarabi Mincho', sans-serif;
+}
+
 li {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Sawarabi Mincho', sans-serif;
     margin-bottom: 5px;
 }
 
