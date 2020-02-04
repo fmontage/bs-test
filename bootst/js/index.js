@@ -31,11 +31,14 @@
         const label = document.createElement('label');
         const div = document.createElement('div');
         const span = document.createElement('span');
+        const deleteNode = document.createElement('div')
+
 
 
         label.className = 'label_style';
         div.className = 'div_style';
         checkboxNode.className = 'checkboxNode_style';
+        deleteNode.className = 'deleteNode_style';
 
 
         checkboxNode.type = 'checkbox';
@@ -58,6 +61,7 @@
         span.appendChild(textNode);
         label.appendChild(checkboxNode);
         label.appendChild(div);
+        li.appendChild(deleteNode);
 
         document.querySelector('.js-todoList').appendChild(li);
 
@@ -112,6 +116,13 @@
         todoData.push(data);
 
         saveData();
+    });
+
+    document.querySelectorAll('.deleteNode_style').forEach(function (delt) {
+        
+    delt.addEventListener('click', function() {
+      this.parentNode.remove();
+    });
     });
 
 })();

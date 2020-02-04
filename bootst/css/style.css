@@ -3,13 +3,16 @@ body {
     background-image: url(../img/background.jpg);
     background-repeat: no-repeat;
     z-index: -1;
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Sawarabi Mincho', sans-serif;
 }
 
 h1{
     font-family: 'Sawarabi Mincho', sans-serif;
 }
 
+li {
+    position: relative;
+}
 
 /*
 -------- 全体 -------
@@ -149,11 +152,11 @@ h1{
 }
 
 
-.orange {
+.orange span {
     color: #ff9933;
 }
 
-.red {
+.red span {
     color: #ff3333;
 }
 
@@ -161,3 +164,18 @@ h1{
     opacity: 0.5;
     color: #000;
 }
+
+.deleteNode_style {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 15px;
+}
+
+.deleteNode_style:hover {
+    opacity: 0.5;
+}
+
+.deleteNode_style:before {
+    content: "削除";
+} 
