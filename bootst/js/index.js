@@ -4,7 +4,7 @@
 
     let todoData = [];
     const storage = window.localStorage;
-   
+
     function saveData() {
         storage.setItem('todo', JSON.stringify(todoData));
     }
@@ -28,6 +28,13 @@
         const textNode = document.createTextNode(data.value + "\t" + data.ymd);
         const checkboxNode = document.createElement('input');
         const li = document.createElement('li');
+        const label = document.createElement('label');
+        const div = document.createElement('div');
+
+        label.className = 'label_style';
+        div.className = 'div_style';
+        checkboxNode.className = 'checkboxNode_style';
+
 
         checkboxNode.type = 'checkbox';
         checkboxNode.checked = data.done;
@@ -44,12 +51,14 @@
             saveData();
         });
 
-        li.appendChild(checkboxNode);
-        li.appendChild(textNode);
+        li.appendChild(label);
+        label.appendChild(textNode);
+        label.appendChild(checkboxNode);
+        label.appendChild(div);
 
         document.querySelector('.js-todoList').appendChild(li);
 
-        
+
 
         const liTodo = document.querySelectorAll('.nocheck-color');
 
@@ -81,19 +90,19 @@
         const value = document.querySelector('.js-inputText').value;
         const now = new Date();
         const timestamp = now.getTime();
-        const month = now.getMonth()+1;
+        const month = now.getMonth() + 1;
         const hiniti = now.getDate();
         const ymd = "(" + month + "/" + hiniti + ")";
 
 
         const data = {
-                value: value,
-                done: false,
-                timestamp: timestamp,
-                ymd: ymd
+            value: value,
+            done: false,
+            timestamp: timestamp,
+            ymd: ymd
         };
 
-       
+
 
         addList(data);
 

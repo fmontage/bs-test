@@ -3,16 +3,17 @@ body {
     background-image: url(../img/background.jpg);
     background-repeat: no-repeat;
     z-index: -1;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 h1{
     font-family: 'Sawarabi Mincho', sans-serif;
 }
 
-li {
-    font-family: 'Sawarabi Mincho', sans-serif;
-    margin-bottom: 5px;
-}
+
+/*
+-------- 全体 -------
+*/
 
 .wrap {
     background-color: rgba(255, 255, 255, 0.75);
@@ -26,6 +27,8 @@ li {
     font-size: 40px;
     margin-bottom: 10px;
 }
+
+/* -----header------ */
 
 .header {
     margin-top: 30px;
@@ -64,6 +67,85 @@ li {
 
 .js-todoList {
     list-style: none;
+}
+
+
+/* -----checkboc style ----- */
+
+
+.label_style {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.label_style:hover {
+    text-shadow: #000;
+    opacity: 0.8;
+}
+
+.label_style input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.div_style {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: #fff;
+}
+
+
+.label_style:hover input ~ .div_style,
+.label_style input:focus ~ .div_style {
+  background: #ccc;
+}
+
+
+.label_style input:checked ~ .div_style {
+  background: #00c1f1;
+}
+
+.label_style:hover input:not([disabled]):checked ~ .div_style,
+.label_style input:checked:focus ~ .div_style {
+  background: #00c1f1;
+}
+
+.label_style input:disabled ~ .div_style {
+  background: #e6e6e6;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.div_style:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.label_style input:checked ~ .div_style:after {
+  display: block;
+}
+
+.label_style .div_style:after {
+  left: 8px;
+  top: 4px;
+  width: 3px;
+  height: 8px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.label_style input:disabled ~ .div_style:after {
+  border-color: #fff;
 }
 
 
