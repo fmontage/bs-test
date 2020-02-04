@@ -61,7 +61,7 @@
         span.appendChild(textNode);
         label.appendChild(checkboxNode);
         label.appendChild(div);
-        li.appendChild(deleteNode);
+        // li.appendChild(deleteNode);
 
         document.querySelector('.js-todoList').appendChild(li);
 
@@ -118,11 +118,11 @@
         saveData();
     });
 
-    document.querySelectorAll('.deleteNode_style').forEach(function (delt) {
+    // document.querySelectorAll('.deleteNode_style').forEach(function (delt) {
         
-    delt.addEventListener('click', function() {
-      this.parentNode.remove();
-    });
-    });
+    // delt.addEventListener('click', function() {
+    //   this.parentNode.remove();
+    // });
+    // });
 
 })();
