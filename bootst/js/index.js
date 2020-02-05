@@ -70,8 +70,8 @@
         const liTodo = document.querySelectorAll('.nocheck-color');
 
 
-        setTimeout(addClass, 5000);
-        setTimeout(addClassRed, 8000);
+        setTimeout(addClass, 86400000);
+        setTimeout(addClassRed, 172800000);
 
 
         function addClass() {

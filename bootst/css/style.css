@@ -63,6 +63,7 @@ li {
 }
 
 .list-wrap {
+    position: relative;
     height: auto;
     margin: 10px auto;
     width: 720px;
@@ -179,3 +180,8 @@ li {
 .deleteNode_style:before {
     content: "削除";
 } 
+
+.all_delete {
+  position: absolute;
+  right: 0;
+}
